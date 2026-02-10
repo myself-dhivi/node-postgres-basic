@@ -1,6 +1,16 @@
-# Node.js + PostgreSQL Starter Project (From Scratch)
+# Node.js + PostgreSQL Starter (Windows & Ubuntu)
 
-## Step 1 — Create project
+## 1. Create Project
+
+### Windows (PowerShell / CMD)
+
+```bash
+mkdir node-postgres-basic
+cd node-postgres-basic
+npm init -y
+```
+
+### Ubuntu / Linux / Mac
 
 ```bash
 mkdir node-postgres-basic
@@ -10,7 +20,7 @@ npm init -y
 
 ---
 
-## Step 2 — Install dependencies
+## 2. Install Dependencies
 
 ```bash
 npm install express pg dotenv
@@ -19,18 +29,26 @@ npm install --save-dev nodemon
 
 ---
 
-## Step 3 — Create project files
+## 3. Create Project Files
+
+### Windows
 
 ```bash
-touch server.js
-touch db.js
-touch .env
-touch README.md
+type nul > server.js
+type nul > db.js
+type nul > .env
+type nul > README.md
+```
+
+### Ubuntu / Linux / Mac
+
+```bash
+touch server.js db.js .env README.md
 ```
 
 ---
 
-## Step 4 — Setup `.env`
+## 4. Setup `.env`
 
 ```
 PORT=3002
@@ -44,7 +62,7 @@ DB_PORT=5432
 
 ---
 
-## Step 5 — Create database
+## 5. Create Database
 
 ```bash
 psql -U postgres
@@ -56,7 +74,7 @@ CREATE DATABASE testdb;
 
 ---
 
-## Step 6 — Create table
+## 6. Create Table
 
 ```bash
 psql -U postgres -d testdb
@@ -75,7 +93,7 @@ VALUES ('John Doe','john@gmail.com');
 
 ---
 
-## Step 7 — Add scripts to `package.json`
+## 7. Add scripts to package.json
 
 ```json
 "scripts": {
@@ -86,7 +104,7 @@ VALUES ('John Doe','john@gmail.com');
 
 ---
 
-## Step 8 — Run project
+## 8. Run project
 
 ```bash
 npm run dev
@@ -100,7 +118,7 @@ http://localhost:3002/users
 
 ---
 
-## Step 9 — Project structure
+## 9. Project structure
 
 ```
 node-postgres-basic
